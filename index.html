@@ -11,8 +11,12 @@
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
     <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="./build/assets/app-VoKy35uL.css">
+    <script type="module" src="./build/assets/app-DIuewKhF.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <script src="https://cdn.tailwindcss.com"></script>
+
     <!-- Alpine.js -->
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 
@@ -20,13 +24,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
 
-    <!-- Styles / Scripts -->
-    <link rel="stylesheet" href="./build/assets/app-VoKy35uL.css">
-    <script type="module" src="./build/assets/app-DIuewKhF.js"></script>
+
 
     <script id="browser-logger-active">
         (function () {
-            const ENDPOINT = 'http://127.0.0.1:8000/_boost/browser-logs';
+            const ENDPOINT = './_boost/browser-logs';
             const logQueue = [];
             let flushTimeout = null;
 
@@ -362,39 +364,59 @@
             mobileSearchIcon.classList.toggle('rotate-180');
         });
     </script> <!-- HERO SECTION -->
-    <section
-        class="relative min-h-[90vh] flex items-center justify-center px-4 bg-gradient-to-br from-green-50 to-white">
+    <section class="relative min-h-[90vh] flex items-center justify-center px-4 overflow-hidden">
+
+        <!-- Background Image + Mask -->
+        <div class="absolute inset-0 z-0">
+            <!-- Background Image -->
+            <div class="absolute inset-0 bg-cover bg-center lg:bg-right"
+                style="background-image: url('/images/ofw.png');">
+            </div>
+
+            <!-- Very light blur -->
+            <div class="absolute inset-0 backdrop-blur-[2px]"></div>
+
+            <!-- Color mask -->
+            <div class="absolute inset-0 bg-gradient-to-br from-green-950/50 via-black/40 to-green-900/45"></div>
+
+            <!-- Soft highlight -->
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(34,197,94,0.18),transparent_58%)]">
+            </div>
+
+            <!-- Light vignette -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black/15 via-transparent to-black/5"></div>
+
+        </div>
 
         <!-- Content -->
         <div class="relative z-10 w-full max-w-4xl text-center">
 
             <!-- Title -->
-            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-gray-900 animate-fade-in">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white animate-fade-in">
                 Explore Countless Opportunities Awaiting You
             </h1>
 
             <!-- Subtitle -->
-            <p class="mt-4 text-base sm:text-lg text-gray-600 animate-fade-in delay-200">
+            <p class="mt-4 text-base sm:text-lg text-white/80 animate-fade-in delay-200">
                 Discover thousands of job opportunities with no placement fees. Connect with verified agencies and start
                 your career journey today.
-
             </p>
 
             <!-- Search Bar -->
             <div
-                class="mt-10 bg-white rounded-2xl shadow-lg border border-gray-200 p-4 flex flex-col md:flex-row gap-3 items-stretch animate-slide-up">
+                class="mt-10 bg-white/90 backdrop-blur-md rounded-2xl shadow-lg border border-white/30 p-4 flex flex-col md:flex-row gap-3 items-stretch animate-slide-up">
 
                 <!-- Job Title -->
                 <div
-                    class="flex items-center gap-2 flex-1 border border-gray-200 rounded-xl px-4 py-3 focus-within:border-green-600 transition transform hover:-translate-y-0.5 hover:shadow-md duration-200">
+                    class="flex items-center gap-2 flex-1 border border-gray-200 rounded-xl px-4 py-3 focus-within:border-green-600 transition transform hover:-translate-y-0.5 hover:shadow-md duration-200 bg-white">
                     <i data-lucide="briefcase" class="w-5 h-5 text-gray-400"></i>
                     <input type="text" placeholder="Job title or keyword"
-                        class="w-full outline-none text-gray-700 placeholder-gray-400 text-base sm:text-lg" />
+                        class="w-full outline-none text-gray-700 placeholder-gray-400 text-base sm:text-lg bg-transparent" />
                 </div>
 
                 <!-- Country Dropdown -->
                 <div
-                    class="flex items-center gap-2 flex-1 border border-gray-200 rounded-xl px-4 py-3 focus-within:border-green-600 transition transform hover:-translate-y-0.5 hover:shadow-md duration-200">
+                    class="flex items-center gap-2 flex-1 border border-gray-200 rounded-xl px-4 py-3 focus-within:border-green-600 transition transform hover:-translate-y-0.5 hover:shadow-md duration-200 bg-white">
                     <i data-lucide="globe" class="w-5 h-5 text-gray-400"></i>
                     <select class="w-full outline-none text-gray-700 bg-transparent text-base sm:text-lg">
                         <option>All Countries</option>
@@ -421,27 +443,27 @@
             <div class="mt-6 flex flex-wrap justify-center gap-3">
 
                 <div
-                    class="filter-card flex items-center gap-2 bg-white shadow-md border border-gray-200 rounded-2xl px-4 py-2 cursor-pointer transition transform hover:-translate-y-0.5 hover:shadow-lg duration-200">
-                    <i data-lucide="shield-check" class="w-4 h-4 text-green-600"></i>
-                    <span class="text-gray-700 text-sm font-medium">No placement fee</span>
+                    class="filter-card flex items-center gap-2 bg-white/90 backdrop-blur-md shadow-md border border-white/30 rounded-2xl px-4 py-2 cursor-pointer transition transform hover:-translate-y-0.5 hover:shadow-lg duration-200">
+                    <i data-lucide="shield-check" class="w-4 h-4 text-green-700"></i>
+                    <span class="text-gray-800 text-sm font-medium">No placement fee</span>
                 </div>
 
                 <div
-                    class="filter-card flex items-center gap-2 bg-white shadow-md border border-gray-200 rounded-2xl px-4 py-2 cursor-pointer transition transform hover:-translate-y-0.5 hover:shadow-lg duration-200">
-                    <i data-lucide="graduation-cap" class="w-4 h-4 text-green-600"></i>
-                    <span class="text-gray-700 text-sm font-medium">High school diploma</span>
+                    class="filter-card flex items-center gap-2 bg-white/90 backdrop-blur-md shadow-md border border-white/30 rounded-2xl px-4 py-2 cursor-pointer transition transform hover:-translate-y-0.5 hover:shadow-lg duration-200">
+                    <i data-lucide="graduation-cap" class="w-4 h-4 text-green-700"></i>
+                    <span class="text-gray-800 text-sm font-medium">High school diploma</span>
                 </div>
 
                 <div
-                    class="filter-card flex items-center gap-2 bg-white shadow-md border border-gray-200 rounded-2xl px-4 py-2 cursor-pointer transition transform hover:-translate-y-0.5 hover:shadow-lg duration-200">
-                    <i data-lucide="user-x" class="w-4 h-4 text-green-600"></i>
-                    <span class="text-gray-700 text-sm font-medium">No work experience</span>
+                    class="filter-card flex items-center gap-2 bg-white/90 backdrop-blur-md shadow-md border border-white/30 rounded-2xl px-4 py-2 cursor-pointer transition transform hover:-translate-y-0.5 hover:shadow-lg duration-200">
+                    <i data-lucide="user-x" class="w-4 h-4 text-green-700"></i>
+                    <span class="text-gray-800 text-sm font-medium">No work experience</span>
                 </div>
 
                 <div
-                    class="filter-card flex items-center gap-2 bg-white shadow-md border border-gray-200 rounded-2xl px-4 py-2 cursor-pointer transition transform hover:-translate-y-0.5 hover:shadow-lg duration-200">
-                    <i data-lucide="award" class="w-4 h-4 text-green-600"></i>
-                    <span class="text-gray-700 text-sm font-medium">College graduate</span>
+                    class="filter-card flex items-center gap-2 bg-white/90 backdrop-blur-md shadow-md border border-white/30 rounded-2xl px-4 py-2 cursor-pointer transition transform hover:-translate-y-0.5 hover:shadow-lg duration-200">
+                    <i data-lucide="award" class="w-4 h-4 text-green-700"></i>
+                    <span class="text-gray-800 text-sm font-medium">College graduate</span>
                 </div>
 
             </div>
@@ -458,12 +480,10 @@
         const filterCards = document.querySelectorAll('.filter-card');
         filterCards.forEach(card => {
             card.addEventListener('click', () => {
-                // Toggle background and border
                 card.classList.toggle('bg-green-50');
                 card.classList.toggle('border-green-600');
-                // Toggle text color
                 const span = card.querySelector('span');
-                span.classList.toggle('text-green-600');
+                span.classList.toggle('text-green-700');
             });
         });
     </script>
@@ -504,8 +524,9 @@
             animation-delay: 0.2s;
         }
     </style>
-    <section class="py-16 bg-white ">
-        <div class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
             <!-- Section Header -->
             <div class="text-center mb-12">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
@@ -517,106 +538,163 @@
                 </p>
             </div>
 
-            <!-- Industry Cards Grid -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
 
-                <a href="#"
-                    class="group flex flex-col items-center p-6 bg-white rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-transform transform hover:-translate-y-1 cursor-pointer text-center">
-                    <div class="text-4xl mb-4 transition-transform duration-300 group-hover:scale-110">
-                        🏥
+            <!-- Industry Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <a href="#" class="group bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-lg
+                          transition-all duration-300 hover:-translate-y-1 overflow-hidden">
+
+                    <!-- Image -->
+                    <div class="h-36 sm:h-40 w-full overflow-hidden">
+                        <img src="./images/healthcare.jpg" alt="Healthcare"
+                            class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-2 transition-colors group-hover:text-[#16A34A]">
-                        Healthcare
-                    </h3>
-                    <p class="text-gray-500 font-medium">
-                        234 jobs
-                    </p>
+
+                    <!-- Content -->
+                    <div class="p-5 text-center">
+                        <h3 class="text-lg font-semibold text-gray-900 group-hover:text-[#16A34A] transition-colors">
+                            Healthcare
+                        </h3>
+                        <p class="text-sm text-gray-500 mt-1">
+                            234 jobs available
+                        </p>
+                    </div>
                 </a>
-                <a href="#"
-                    class="group flex flex-col items-center p-6 bg-white rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-transform transform hover:-translate-y-1 cursor-pointer text-center">
-                    <div class="text-4xl mb-4 transition-transform duration-300 group-hover:scale-110">
-                        💻
+                <a href="#" class="group bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-lg
+                          transition-all duration-300 hover:-translate-y-1 overflow-hidden">
+
+                    <!-- Image -->
+                    <div class="h-36 sm:h-40 w-full overflow-hidden">
+                        <img src="./images/technology.jpg" alt="Technology"
+                            class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-2 transition-colors group-hover:text-[#16A34A]">
-                        Technology
-                    </h3>
-                    <p class="text-gray-500 font-medium">
-                        456 jobs
-                    </p>
+
+                    <!-- Content -->
+                    <div class="p-5 text-center">
+                        <h3 class="text-lg font-semibold text-gray-900 group-hover:text-[#16A34A] transition-colors">
+                            Technology
+                        </h3>
+                        <p class="text-sm text-gray-500 mt-1">
+                            456 jobs available
+                        </p>
+                    </div>
                 </a>
-                <a href="#"
-                    class="group flex flex-col items-center p-6 bg-white rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-transform transform hover:-translate-y-1 cursor-pointer text-center">
-                    <div class="text-4xl mb-4 transition-transform duration-300 group-hover:scale-110">
-                        🏗️
+                <a href="#" class="group bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-lg
+                          transition-all duration-300 hover:-translate-y-1 overflow-hidden">
+
+                    <!-- Image -->
+                    <div class="h-36 sm:h-40 w-full overflow-hidden">
+                        <img src="./images/construction.jpg" alt="Construction"
+                            class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-2 transition-colors group-hover:text-[#16A34A]">
-                        Construction
-                    </h3>
-                    <p class="text-gray-500 font-medium">
-                        189 jobs
-                    </p>
+
+                    <!-- Content -->
+                    <div class="p-5 text-center">
+                        <h3 class="text-lg font-semibold text-gray-900 group-hover:text-[#16A34A] transition-colors">
+                            Construction
+                        </h3>
+                        <p class="text-sm text-gray-500 mt-1">
+                            189 jobs available
+                        </p>
+                    </div>
                 </a>
-                <a href="#"
-                    class="group flex flex-col items-center p-6 bg-white rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-transform transform hover:-translate-y-1 cursor-pointer text-center">
-                    <div class="text-4xl mb-4 transition-transform duration-300 group-hover:scale-110">
-                        🏨
+                <a href="#" class="group bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-lg
+                          transition-all duration-300 hover:-translate-y-1 overflow-hidden">
+
+                    <!-- Image -->
+                    <div class="h-36 sm:h-40 w-full overflow-hidden">
+                        <img src="./images/hospitality.jpg" alt="Hospitality"
+                            class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-2 transition-colors group-hover:text-[#16A34A]">
-                        Hospitality
-                    </h3>
-                    <p class="text-gray-500 font-medium">
-                        312 jobs
-                    </p>
+
+                    <!-- Content -->
+                    <div class="p-5 text-center">
+                        <h3 class="text-lg font-semibold text-gray-900 group-hover:text-[#16A34A] transition-colors">
+                            Hospitality
+                        </h3>
+                        <p class="text-sm text-gray-500 mt-1">
+                            312 jobs available
+                        </p>
+                    </div>
                 </a>
-                <a href="#"
-                    class="group flex flex-col items-center p-6 bg-white rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-transform transform hover:-translate-y-1 cursor-pointer text-center">
-                    <div class="text-4xl mb-4 transition-transform duration-300 group-hover:scale-110">
-                        ⚙️
+                <a href="#" class="group bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-lg
+                          transition-all duration-300 hover:-translate-y-1 overflow-hidden">
+
+                    <!-- Image -->
+                    <div class="h-36 sm:h-40 w-full overflow-hidden">
+                        <img src="./images/engineering.jpg" alt="Engineering"
+                            class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-2 transition-colors group-hover:text-[#16A34A]">
-                        Engineering
-                    </h3>
-                    <p class="text-gray-500 font-medium">
-                        267 jobs
-                    </p>
+
+                    <!-- Content -->
+                    <div class="p-5 text-center">
+                        <h3 class="text-lg font-semibold text-gray-900 group-hover:text-[#16A34A] transition-colors">
+                            Engineering
+                        </h3>
+                        <p class="text-sm text-gray-500 mt-1">
+                            267 jobs available
+                        </p>
+                    </div>
                 </a>
-                <a href="#"
-                    class="group flex flex-col items-center p-6 bg-white rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-transform transform hover:-translate-y-1 cursor-pointer text-center">
-                    <div class="text-4xl mb-4 transition-transform duration-300 group-hover:scale-110">
-                        📚
+                <a href="#" class="group bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-lg
+                          transition-all duration-300 hover:-translate-y-1 overflow-hidden">
+
+                    <!-- Image -->
+                    <div class="h-36 sm:h-40 w-full overflow-hidden">
+                        <img src="./images/education.jpg" alt="Education"
+                            class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-2 transition-colors group-hover:text-[#16A34A]">
-                        Education
-                    </h3>
-                    <p class="text-gray-500 font-medium">
-                        145 jobs
-                    </p>
+
+                    <!-- Content -->
+                    <div class="p-5 text-center">
+                        <h3 class="text-lg font-semibold text-gray-900 group-hover:text-[#16A34A] transition-colors">
+                            Education
+                        </h3>
+                        <p class="text-sm text-gray-500 mt-1">
+                            145 jobs available
+                        </p>
+                    </div>
                 </a>
-                <a href="#"
-                    class="group flex flex-col items-center p-6 bg-white rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-transform transform hover:-translate-y-1 cursor-pointer text-center">
-                    <div class="text-4xl mb-4 transition-transform duration-300 group-hover:scale-110">
-                        🏭
+                <a href="#" class="group bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-lg
+                          transition-all duration-300 hover:-translate-y-1 overflow-hidden">
+
+                    <!-- Image -->
+                    <div class="h-36 sm:h-40 w-full overflow-hidden">
+                        <img src="./images/manufacturing.jpg" alt="Manufacturing"
+                            class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-2 transition-colors group-hover:text-[#16A34A]">
-                        Manufacturing
-                    </h3>
-                    <p class="text-gray-500 font-medium">
-                        198 jobs
-                    </p>
+
+                    <!-- Content -->
+                    <div class="p-5 text-center">
+                        <h3 class="text-lg font-semibold text-gray-900 group-hover:text-[#16A34A] transition-colors">
+                            Manufacturing
+                        </h3>
+                        <p class="text-sm text-gray-500 mt-1">
+                            198 jobs available
+                        </p>
+                    </div>
                 </a>
-                <a href="#"
-                    class="group flex flex-col items-center p-6 bg-white rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-transform transform hover:-translate-y-1 cursor-pointer text-center">
-                    <div class="text-4xl mb-4 transition-transform duration-300 group-hover:scale-110">
-                        💰
+                <a href="#" class="group bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-lg
+                          transition-all duration-300 hover:-translate-y-1 overflow-hidden">
+
+                    <!-- Image -->
+                    <div class="h-36 sm:h-40 w-full overflow-hidden">
+                        <img src="./images/finance.jpg" alt="Finance"
+                            class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-2 transition-colors group-hover:text-[#16A34A]">
-                        Finance
-                    </h3>
-                    <p class="text-gray-500 font-medium">
-                        320 jobs
-                    </p>
+
+                    <!-- Content -->
+                    <div class="p-5 text-center">
+                        <h3 class="text-lg font-semibold text-gray-900 group-hover:text-[#16A34A] transition-colors">
+                            Finance
+                        </h3>
+                        <p class="text-sm text-gray-500 mt-1">
+                            320 jobs available
+                        </p>
+                    </div>
                 </a>
             </div>
+
         </div>
     </section>
     <section class="py-16 bg-gray-50">
